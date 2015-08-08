@@ -86,12 +86,12 @@ $bearer_token = $reply->access_token;
  // get saved tweet ids in range into an array
  
 include '../../config/names.php';
-
+/*
 $Server = "localhost";
 $username = "";
 $password = "";
 $db_name = "test";
-
+*/
 
   $con = mysql_connect("$Server", "$username", "$password");
   if (!$con) {
@@ -99,7 +99,8 @@ $db_name = "test";
   }
   mysql_select_db($db_name, $con);
 
-  date_default_timezone_set('America/Denver');
+//  date_default_timezone_set('America/Denver');
+  date_default_timezone_set('America/New York');
 
   $sql="SELECT webit_id FROM dfm_webits where ";
   $probs = false;
