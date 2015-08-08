@@ -1,0 +1,125 @@
+
+     .menu_btn {
+       width:25px;
+       background-color:white;
+     }
+
+     .rail {
+ 	vertical-align:middle;
+  	display:inline-block;
+	width:60%;
+     }
+
+     #bleft_spot {
+	display:inline-block;
+	vertical-align:middle;
+	padding-left:5px;
+    }
+
+     #bright_spot {
+	display:inline-block;
+	float:right;
+     }
+
+
+    .my-box {
+        padding:5px;
+        border: 5px solid silver;
+        background-color:white;
+     }
+
+
+ .ui-page .ui-content .ui-listview .ui-li-desc  {
+        white-space:normal;
+    }
+
+ 
+div .plusone, .twitter, .fb-like {
+    font-size: 1px;
+    display: inline-block;
+  vertical-align:top;
+}
+
+div .fb_reset {
+    display: inline;
+} 
+
+.ui-btn {
+    margin-top:5px;
+    margin-bottom:0px;
+}	
+
+.ui-btn-inner {
+    white-space:normal;
+}		
+
+
+     .piczoom {
+	 width:150px;
+     }
+
+
+     .story {
+	whitespace:normal;
+        font-size: 1 em;
+        font-weight:normal;
+        display:inline;
+     }
+
+
+     .storyzoom {
+	width:200px;
+        font-size: 1.3 em;
+        display:inline;
+     }
+
+
+    .mbox {
+   //    border-style:solid;
+   //    border-color:silver;
+   //    border-width:2px;
+         display:block;
+    }
+
+
+
+.spotd_on {
+border-color:silver;
+border-style:solid;
+border-width:2px;
+font-family: sans-serif;
+font-weight:normal;
+font-size:medium;
+//vertical-align:top;
+padding:2px;
+}
+
+.spotd_mark {
+border-color:silver;
+border-style:solid;
+border-width:1px;
+font-family: sans-serif;
+font-weight:normal;
+font-size:medium;
+//vertical-align:top;
+}
+
+   
+.spotd_off {
+border-color:white;
+border-style:solid;
+border-width:1px;
+font-family: sans-serif;
+font-weight:normal;
+font-size:medium;
+//vertical-align:top;
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
