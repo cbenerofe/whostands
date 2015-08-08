@@ -1,0 +1,64 @@
+
+@media screen and (min-width:800px) {
+
+    .screen_talk {
+       font-size: 1.1em;
+       vertical-align:middle;
+    }
+
+     #bleft_spot {
+	width:65%;
+     }
+
+     #bright_spot {
+ 	width:35%;
+     }
+
+
+     #adside_bar {
+       width:25%;
+       padding:10px;
+    }
+
+    #admain_spot {
+       width:75%;
+     }
+
+     #main_spot {
+       width:100%;
+     }
+
+     #main_view {
+       width:100%;
+     }
+
+     .menu_btn {
+        width:25px;
+        background-color:white;
+     }
+
+     .mybtns  {
+        padding:5px 5px; 
+        border:none;
+     }
+
+     #searchbox {
+        width:150px;
+     }
+
+     #chip_rail {
+        width:50%;
+     }
+
+     #chunk_rail {
+        width:50%;
+     }
+
+      .piclip {
+         clip:rect(0px,100px,100px,0px);
+	 width:75px;
+     }
+ 
+}
+
+
