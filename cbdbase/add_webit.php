@@ -85,7 +85,7 @@ if ($pid == 'null') {
           }
       }
 
-     $sql_ins = "insert into dfm_webits values ('','" . $pid . "','" . $source . "','" . $uname . "','" . addslashes($story) .  "'," . $created_at . ", now() ,'" . $picurl . "' ,'" . $linkurl . "','" . $embedurl . "' )";
+     $sql_ins = "insert into dfm_webits values ('','" . $pid . "','" . $source . "','" . $uname . "','" . addslashes($story) .  "'," . $created_at . ", now() ,'" . $picurl . "' ,'" . $linkurl . "','" . $embedurl . "',false )";
 
      $ret->insql = $sql_ins;    
      $result = mysql_query($sql_ins);
