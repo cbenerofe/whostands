@@ -1,6 +1,5 @@
 <?php
 require_once('../config/names.php');
-require_once('../config/config.inc.php');
 require_once("../dist/freetag.class.php");
 
 //session_start();
