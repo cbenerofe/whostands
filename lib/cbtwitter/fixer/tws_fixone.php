@@ -16,6 +16,7 @@ $array=$oauth->getAccessToken($_GET['oauth_verifier']) ;
 
 $twid = $_GET['twid']; 
 
+$twid = '99902390601400320';
 
 /*Permanent access tokens*/
 
@@ -39,7 +40,7 @@ $_SESSION["userid"]=$array['user_id'];
      echo('<html><body>');
  
 
-   $con = mysql_connect('benman.db.5241208.hostedresource.com', 'benman', 'Letsgo123');
+   $con = mysql_connect('benman.db.12765961.hostedresource.com', 'benman', 'Letsgo#123');
    if (!$con)  {
      echo('Could not connect: ' . mysql_error());
    }
@@ -49,7 +50,7 @@ $_SESSION["userid"]=$array['user_id'];
     echo $twid . "<br>";
 
 
-    $requrl = "statuses/show.json?id=".$twid;
+    $requrl = "statuses/show/".$twid;
 
     $content = $connection->get($requrl);  
 
@@ -59,7 +60,7 @@ $_SESSION["userid"]=$array['user_id'];
 
     echo $picurl. " <br>" ;
 
-    $sql_upd = "update standing_tweets set twpicurl = '".$picurl ."'  where twid ='".$twid."'";
+    $sql_upd = "update dfm_webits set picurl = '".$picurl ."'  where uuid ='".$twid."'";
 
     $result = mysql_query($sql_upd);
      echo "result: " . $result. "<br>" ;
@@ -75,7 +76,7 @@ $_SESSION["userid"]=$array['user_id'];
 
       echo "after: ". $tstr . "<br>"; 
  
-     $sql_upd = "update standing_tweets set twdate = '".$tstr ."'  where twid ='".$twid."'";
+     $sql_upd = "update dfm_webits set created_at= '".$tstr ."'  where uuid ='".$twid."'";
 
     $result = mysql_query($sql_upd);
      echo "result: " . $result ;

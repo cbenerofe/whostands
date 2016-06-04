@@ -44,7 +44,7 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION["access_
 
 
 
-   $sql="SELECT * FROM standing_tweets where twpicurl = '' ";
+   $sql="SELECT * FROM dfm_webits where source = 'twitter' and jsoned = false limit 100 ";
 
    $biglist = mysql_query($sql);
 
@@ -53,14 +53,17 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION["access_
   while($row = mysql_fetch_array($biglist))   {
 
 
-    $twid = $row['twid'];
+    $twid = $row['uuid'];
 
-    echo  $twid  . "-" . $biglist['tweeter'] . "<br>";
+    echo  $twid  . "-" . $biglist['owner_id'] . "\n";
 
     $requrl = "statuses/show.json?id=".$twid;
 
     $content = $connection->get($requrl);  
+  
+    echo $content;
 
+/*
     $picurl= $content->user->profile_image_url  ; 
      echo   $picurl;
      $sql_upd = "update standing_tweets set twpicurl = '".$picurl ."'  where twid ='".$twid."'";
@@ -68,18 +71,15 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION["access_
     $result = mysql_query($sql_upd);
      echo "result: " . $result ;
 
-
    $ts = strtotime( $content->created_at );
  
-
     $tstr = date('Y-m-d h:m:s');
  
      $sql_upd = "update standing_tweets set twdate = '".$tstr ."'  where twid ='".$twid."'";
-
-  
  
     $result = mysql_query($sql_upd);
      echo "result: " . $result ;
+*/
 
  
   }

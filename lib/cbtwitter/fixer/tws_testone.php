@@ -6,7 +6,7 @@ require_once('twitteroauth/twitteroauth/twitteroauth.php');
 require_once('twitteroauth/config.php');
 
 
-
+/*
 $oauth = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET,
  $_SESSION['oauth_token'],
  $_SESSION['oauth_token_secret']);
@@ -15,10 +15,10 @@ $oauth = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET,
 
 $array=$oauth->getAccessToken($_GET['oauth_verifier']) ;
 
-
+*/
 /*Permanent access tokens*/
 
-
+/*
 $_SESSION["access_token"]=$array['oauth_token'];
 
 $_SESSION["access_token_secret"]=$array['oauth_token_secret'];
@@ -27,30 +27,28 @@ $_SESSION["username"]=$array['screen_name'];
 
 $_SESSION["userid"]=$array['user_id'];
 
-
+*/
 
 /* Connect with Twitter API for accessing services */ 
 
 
 
 
-$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION["access_token"],$_SESSION["access_token_secret"]);
+//$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION["access_token"],$_SESSION["access_token_secret"]);
+//$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token,$access_token_secret);
+$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+
+
 
 
 ?>
-
-<HTML>
-
-<body>
-
-<p> test </p>
 
 
 <?php 
 
 
 
-    $requrl = "statuses/show.json?id=103559538552209408";
+    $requrl = "statuses/show/227878861034123264";
 
     $content = $connection->get($requrl);  
 
@@ -65,5 +63,3 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $_SESSION["access_
 
 ?>
 
-</body>
-</html>
